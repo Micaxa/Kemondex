@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kemondex</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Kemondex<span>.</span></h1>
+      <p>Discover your favorite Pokémon.</p>
+      <div id="connection-status" class="connection-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">Checking connection...</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search Pokémon..."
+          aria-label="Search Pokémon"
+        >
+        
+        <div class="type-filters">
+          <h3>Explore by Type</h3>
+      
+          <div class="type-buttons" id="type-buttons">
+            <button class="type-button active" data-type="all">
+              All
+            </button>
+      
+            <button class="type-button" data-type="fire">
+              Fire
+            </button>
+      
+            <button class="type-button" data-type="water">
+              Water
+            </button>
+      
+            <button class="type-button" data-type="grass">
+              Grass
+            </button>
+      
+            <button class="type-button" data-type="electric">
+              Electric
+            </button>
+      
+            <button class="type-button" data-type="psychic">
+              Psychic
+            </button>
+      
+            <button class="type-button" data-type="ice">
+              Ice
+            </button>
+      
+            <button class="type-button" data-type="dragon">
+              Dragon
+            </button>
+            <button
+              id="favorites-filter"
+              type="button"
+              aria-pressed="false"
+            >
+          ♡ Favorites
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="pokemon-section">
+        <div class="section-heading">
+          <h2>Pokémon</h2>
+          <p id="pokemon-count">Discover the collection</p>
+        </div>
+
+        <div class="pokemon-grid" id="pokemon-grid">
+          <!-- Pokémon cards will appear here. -->
+        </div>
+        
+        <div class="pagination" id="pagination">
+          <button id="previous-page" disabled>
+            Previous
+          </button>
+        
+          <span id="page-info">Page 1</span>
+        
+          <button id="next-page">
+            Next
+          </button>
+        </div>
+      </section>
+    </main>
+    <dialog class="pokemon-dialog" id="pokemon-dialog">
+      <button
+        class="close-dialog"
+        id="close-dialog"
+        aria-label="Close Pokémon details"
+      >
+        &times;
+      </button>
+    
+      <div id="pokemon-details">
+        <!-- Pokémon details will appear here. -->
+      </div>
+    </dialog>
+  </div>
+</body>
+</html>

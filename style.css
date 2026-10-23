@@ -1178,6 +1178,122 @@ body {
     font-size: 11px;
   }
 }
+
+/* ==============================
+   APP FOOTER
+============================== */
+
+.app-footer {
+  margin-top: 70px;
+  padding: 30px 24px;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  background: var(--footer-bg, rgba(255, 255, 255, 0.02));
+}
+
+.footer-content {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.footer-brand h2 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: var(--text-color, #ffffff);
+}
+
+.footer-brand h2 span {
+  color: var(--accent-color, #ef4444);
+}
+
+.footer-brand p,
+.footer-info p {
+  margin: 0;
+  color: var(--muted-color, #9ca3af);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 42px;
+  flex-shrink: 0;
+  background: var(--border-color, rgba(255, 255, 255, 0.1));
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-info a {
+  color: var(--accent-color, #ef4444);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footer-info a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 4px !important;
+  font-size: 0.78rem !important;
+}
+
+/* ==============================
+   RESPONSIVE FOOTER
+============================== */
+
+@media (max-width: 600px) {
+  .app-footer {
+    margin-top: 48px;
+    padding: 28px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .footer-info {
+    text-align: left;
+  }
+}
+
+/* DEVELOPER CREDIT */
+
+.footer-developer {
+  margin-top: 5px !important;
+}
+
+.developer-name {
+  display: inline-block;
+  margin-left: 3px;
+  font-weight: 700;
+  color: var(--accent-color, #ef4444);
+  letter-spacing: 0.2px;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.developer-name:hover {
+  transform: translateY(-1px);
+}
+
 /* Larger screens */
 
 @media (min-width: 600px) {
